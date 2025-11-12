@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Screener Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Crypto Screener Pro</h1>
+    </header>
+
+    <nav>
+        <button onclick="showSection('market')">Market Top 10</button>
+        <button onclick="showSection('binance')">Whale Binance</button>
+        <button onclick="showSection('onchain')">Whale On-chain</button>
+    </nav>
+
+    <section id="market" class="page">
+        <h2>Market Top 10</h2>
+        <div id="marketList" class="cards"></div>
+    </section>
+
+    <section id="binance" class="page hidden">
+        <h2>Whale Binance</h2>
+        <input id="symbolInput" placeholder="BTCUSDT" />
+        <button onclick="loadWhaleBinance()">Check</button>
+        <div id="binanceList" class="cards"></div>
+    </section>
+
+    <section id="onchain" class="page hidden">
+        <h2>Whale On-chain</h2>
+        <div id="onchainList" class="cards"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
